@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Correct way: Create a new text node and append it.
+    const myDiv = document.getElementById("myDiv");
+    const newText = document.createTextNode(" Added text");
+    myDiv.appendChild(newText);
+
+    // Alternative: Use insertAdjacentHTML for better performance in specific scenarios. 
+    //myDiv.insertAdjacentHTML('beforeend', ' Added text using insertAdjacentHTML');
+  </script>
+</body>
+</html>
